@@ -14,7 +14,10 @@ const userSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
   },
   social: String,
-  rol: String,
+  rol: {
+    type:String,
+    default:"user"
+  },
 });
 
 userSchema.plugin(mongoosePaginate);
